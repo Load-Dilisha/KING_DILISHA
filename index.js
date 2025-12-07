@@ -1,5 +1,3 @@
-
-
 const {
     default: makeWASocket,
     getAggregateVotesInPollMessage, 
@@ -57,7 +55,7 @@ const df = __dirname + '/auth_info_baileys/creds.json';
 
 if (!fs.existsSync(df)) {
   if (config.SESSION_ID) {
-    const sessdata = config.SESSION_ID.replace("VISPER-MD&", "");
+    const sessdata = config.SESSION_ID.replace("킹_딜리샤=", "");
 
     if (sessdata.includes("#")) {
       const filer = File.fromURL(`https://mega.nz/file/${sessdata}`);
@@ -85,7 +83,7 @@ async function downloadSession(sessdata, df) {
 
   for (let i = 0; i < dbUrls.length; i++) {
     const sessionUrl = `${dbUrls[i]}get-session?q=${sessdata}.json`;
-    console.log(`📥 Downloading session from visper-DB`);
+    console.log(`📥 Downloading session from 킹_딜리샤-DB`);
 
     try {
       const response = await axios.get(sessionUrl);
@@ -142,7 +140,7 @@ async function connectToWA() {
 
 
 
-const responsee = await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json');
+const responsee = await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json');
 const connectnumber = responsee.data
 	
 // Default owner JID
@@ -161,9 +159,9 @@ conn.ev.on('connection.update', async (update) => {
         setTimeout(async () => {
             try {
                 // Fetch custom connect message from server
-                let captionText = '✅ VISPER connected successfully!';
+                let captionText = '✅ 킹_딜리샤 connected successfully!';
                 try {
-                    const response = await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json');
+                    const response = await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json');
                     const ownerdataa = response.data;
                     captionText = ownerdataa?.connectmg || captionText;
                 } catch (fetchErr) {
@@ -172,7 +170,7 @@ conn.ev.on('connection.update', async (update) => {
 
                 // Send initial connect image
                 await conn.sendMessage(DEFAULT_OWNER_JID, {
-                    image: { url: 'https://mv-visper-full-db.pages.dev/Data/visper_main.jpeg' },
+                    image: { url: 'https://files.catbox.moe/w12h80.jpg' },
                     caption: captionText
                 });
 const mvSize = config.MV_SIZE;
@@ -214,7 +212,7 @@ const antiDelete = config.ANTI_DELETE;
 const leaveMsg = config.LEAVE_MSG;
                 // Build config message
   const can = `
-*⚙️ BOT CURRENTLY SETTINGS ⚙️*
+*⛩️ 내 설정을 지금 사용할 수 있습니다 ⛩️*
 
 *\`• Owner Number :\`* ${DEFAULT_OWNER_JID || "Not Set"}
 *\`• Bot Name :\`* ${botName || "Not Set"}
@@ -250,13 +248,13 @@ const leaveMsg = config.LEAVE_MSG;
 *\`• Action :\`* ${action ?? "delete"}
 *\`• Antilink Action :\`* ${antiLinkAction ?? "delete"}
 *\`• Values :\`* ${values?.length ? values.join(", ") : "None"}
-*\`• Logo :\`* ${logo ?? "https://mv-visper-full-db.pages.dev/Data/visper_main.jpeg"}
+*\`• Logo :\`* ${logo ?? "https://files.catbox.moe/w12h80.jpg"}
 *\`• Anti Delete :\`* ${antiDelete ?? "off"}
 *\`• Leave Msg :\`* ${leaveMsg || "None"}
 `;
 
 
-     let joinlink2 = await fetchJson('https://mv-visper-full-db.pages.dev/Main/main_var.json');
+     let joinlink2 = await fetchJson('https://files.catbox.moe/w12h80.jpg');
         
         if (!joinlink2 || !joinlink2.supglink) {
             console.error('❌ Invalid join link data!');
