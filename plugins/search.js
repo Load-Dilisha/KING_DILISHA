@@ -26,14 +26,14 @@ async (conn, mek, m, { from, reply }) => {
         }
         const article = newsData.result
         const imageUrl = article.image || "https://via.placeholder.com/300x200.png?text=No+Image+Available" // Default placeholder if no image
-        let newsMessage = "⚕️ *𝙑𝙄𝙎𝙋𝙀𝙍 𝙈𝘿 𝙉𝙀𝙒𝙎*\n\n"
+        let newsMessage = "⚕️ *킹_딜리샤 NEWS*\n\n"
         newsMessage += `↗️ *${article.title || "ᴜɴᴛɪᴛʟᴇᴅ ɴᴇᴡs"}*\n\n`
         newsMessage += `↗️ *ᴅᴀᴛᴇ:* ${article.date || "ɴᴏ ᴅᴀᴛᴇ ᴀᴠᴀɪʟʙʟᴇ"}\n\n`
         newsMessage += `↗️ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:*\n${article.desc || "No description available"}\n\n`
         newsMessage += `🔗 *ʀᴇᴀᴅ ᴍᴏʀᴇ:* ${article.url || "No link available"}`
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${newsMessage}\n\n *•ᴠɪsᴘᴇʀ ᴍᴅ ɴᴇᴡs•* `
+            caption: `${newsMessage}\n\n *•킹_딜리샤 NEWS•* `
         }, { quoted: mek })
     } catch (error) {
         console.error("News API Error:", error.response?.data || error.message)
@@ -63,14 +63,14 @@ async (conn, mek, m, { from, reply }) => {
         }
         const article = newsData.result
         const imageUrl = article.image || "https://via.placeholder.com/300x200.png?text=No+Image+Available" // Default placeholder if no image
-        let newsMessage = "⚕️ *𝙑𝙄𝙎𝙋𝙀𝙍 𝙈𝘿 𝙉𝙀𝙒𝙎*\n\n"
+        let newsMessage = "⚕️ *킹_딜리샤 NEWS*\n\n"
         newsMessage += `↗️ *${article.title || "ᴜɴᴛɪᴛʟᴇᴅ ɴᴇᴡs"}*\n\n`
         newsMessage += `↗️ *ᴅᴀᴛᴇ:* ${article.date || "ɴᴏ ᴅᴀᴛᴇ ᴀᴠᴀɪʟʙʟᴇ"}\n\n`
         newsMessage += `↗️ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:*\n${article.desc || "No description available"}\n\n`
         newsMessage += `🔗 *ʀᴇᴀᴅ ᴍᴏʀᴇ:* ${article.url || "No link available"}`
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${newsMessage}\n\n *•ᴠɪsᴘᴇʀ ᴍᴅ ɴᴇᴡs•* `
+            caption: `${newsMessage}\n\n *•킹_딜리샤 NEWS•* `
         }, { quoted: mek })
     } catch (error) {
         console.error("News API Error:", error.response?.data || error.message)
@@ -100,14 +100,14 @@ async (conn, mek, m, { from, reply }) => {
         }
         const article = newsData.result
         const imageUrl = article.image || "https://via.placeholder.com/300x200.png?text=No+Image+Available" // Default placeholder if no image
-        let newsMessage = "⚕️ *𝙑𝙄𝙎𝙋𝙀𝙍 𝙈𝘿 𝙉𝙀𝙒𝙎*\n\n"
+        let newsMessage = "⚕️ *킹_딜리샤 NEWS*\n\n"
         newsMessage += `↗️ *${article.title || "ᴜɴᴛɪᴛʟᴇᴅ ɴᴇᴡs"}*\n\n`
         newsMessage += `↗️ *ᴅᴀᴛᴇ:* ${article.date || "ɴᴏ ᴅᴀᴛᴇ ᴀᴠᴀɪʟʙʟᴇ"}\n\n`
         newsMessage += `↗️ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:*\n${article.desc || "No description available"}\n\n`
         newsMessage += `🔗 *ʀᴇᴀᴅ ᴍᴏʀᴇ:* ${article.url || "No link available"}`
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${newsMessage}\n\n *•ᴠɪsᴘᴇʀ ᴍᴅ ɴᴇᴡs•* `
+            caption: `${newsMessage}\n\n *•킹_딜리샤 NEWS•* `
         }, { quoted: mek })
     } catch (error) {
         console.error("News API Error:", error.response?.data || error.message)
@@ -137,14 +137,14 @@ async (conn, mek, m, { from, reply }) => {
         }
         const article = newsData.result
         const imageUrl = article.image || "https://via.placeholder.com/300x200.png?text=No+Image+Available" // Default placeholder if no image
-        let newsMessage = "⚕️ *𝙑𝙄𝙎𝙋𝙀𝙍 𝙈𝘿 𝙉𝙀𝙒𝙎*\n\n"
+        let newsMessage = "⚕️ *킹_딜리샤 NEWS*\n\n"
         newsMessage += `↗️ *${article.title || "ᴜɴᴛɪᴛʟᴇᴅ ɴᴇᴡs"}*\n\n`
         newsMessage += `↗️ *ᴅᴀᴛᴇ:* ${article.date || "ɴᴏ ᴅᴀᴛᴇ ᴀᴠᴀɪʟʙʟᴇ"}\n\n`
         newsMessage += `↗️ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:*\n${article.desc || "No description available"}\n\n`
         newsMessage += `🔗 *ʀᴇᴀᴅ ᴍᴏʀᴇ:* ${article.url || "No link available"}`
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${newsMessage}\n\n *•ᴠɪsᴘᴇʀ ᴍᴅ ɴᴇᴡs•* `
+            caption: `${newsMessage}\n\n *•킹_딜리샤 NEWS•* `
         }, { quoted: mek })
     } catch (error) {
         console.error("News API Error:", error.response?.data || error.message)
@@ -190,8 +190,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363380090478709@newsletter',
-                    newsletterName: 'VISPER-MD',
+                    newsletterJid: '120363405102534270@newsletter',
+                    newsletterName: '킹_딜리샤',
                     serverMessageId: 143
                 }
             }
