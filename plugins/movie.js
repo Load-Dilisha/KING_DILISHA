@@ -51,8 +51,8 @@ async (conn, mek, m, {
       return await conn.sendMessage(from, {
         text: "*`You are not a premium user⚠️`*\n\n" +
               "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-              "_Price : 200 LKR ✔️_\n\n" +
-              "*👨‍💻Contact us : 0778500326 , 0722617699*"
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
       }, { quoted: mek });
     }
 
@@ -88,7 +88,7 @@ async (conn, mek, m, {
 
     let imageBuffer;
     try {
-      const res = await axios.get('https://mv-visper-full-db.pages.dev/Data/visper_main.jpeg', {
+      const res = await axios.get('https://files.catbox.moe/w12h80.jpg', {
         responseType: 'arraybuffer'
       });
       imageBuffer = Buffer.from(res.data, 'binary');
@@ -96,7 +96,7 @@ async (conn, mek, m, {
       imageBuffer = null; 
     }
 
-    const caption = `_*VISPER SEARCH SYSTEM 🎬*_\n\n*\`🔰Input :\`* ${q}\n\n_*🌟 Select your preferred movie download site*_`;
+    const caption = `_*킹_딜리샤 SEARCH SYSTEM 🎬*_\n\n*\`🔰Input :\`* ${q}\n\n_*🌟 Select your preferred movie download site*_`;
 
     if (config.BUTTON === "true") {
      
@@ -114,7 +114,7 @@ async (conn, mek, m, {
       };
 
       return await conn.sendMessage(from, {
-        image: imageBuffer || { url: 'https://mv-visper-full-db.pages.dev/Data/visper_main.jpeg' },
+        image: imageBuffer || { url: 'https://files.catbox.moe/w12h80.jpg' },
         caption,
         footer: config.FOOTER,
         buttons: [
@@ -141,7 +141,7 @@ async (conn, mek, m, {
       }));
 
       return await conn.buttonMessage2(from, {
-        image: { url: 'https://mv-visper-full-db.pages.dev/Data/visper_main.jpeg' },
+        image: { url: 'https://files.catbox.moe/w12h80.jpg' },
         caption,
         footer: config.FOOTER,
         buttons,
@@ -173,7 +173,7 @@ async (conn, mek, m, {
   isPre, isSudo, isOwner, isMe, reply
 }) => {
   try {
-    const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+    const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
     const isFree = pr.mvfree === "true";
 
     // Premium check
@@ -182,8 +182,8 @@ async (conn, mek, m, {
       return await conn.sendMessage(from, {
         text: "*`You are not a premium user⚠️`*\n\n" +
               "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-              "_Price : 200 LKR ✔️_\n\n" +
-              "*👨‍💻Contact us : 0778500326 , 0722617699*"
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
       }, { quoted: mek });
     }
 
@@ -207,7 +207,7 @@ async (conn, mek, m, {
     // Load image buffer
     let imageBuffer;
     try {
-      const res = await axios.get('https://mv-visper-full-db.pages.dev/Data/visper_main.jpeg', {
+      const res = await axios.get('https://files.catbox.moe/w12h80.jpg', {
         responseType: 'arraybuffer'
       });
       imageBuffer = Buffer.from(res.data, 'binary');
@@ -215,7 +215,7 @@ async (conn, mek, m, {
       imageBuffer = null; // fallback
     }
 
-    const caption = `_*VISPER SEARCH SYSTEM 📺*_\n\n*\`Input :\`* ${q}\n\n_*🌟 Select your preferred TV show site*_`;
+    const caption = `_*킹_딜리샤 SEARCH SYSTEM 📺*_\n\n*\`Input :\`* ${q}\n\n_*🌟 Select your preferred TV show site*_`;
 
     if (config.BUTTON === "true") {
       // NativeFlow list buttons
@@ -290,7 +290,7 @@ alias: ["cinesubz"],
 },
 async (conn, m, mek, { from, q, prefix, isSudo, isOwner, isPre, isMe, reply }) => {
 try{
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -299,13 +299,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 	
@@ -536,7 +535,7 @@ async (conn, m, mek, { from, isPre, q, prefix, isMe,isSudo, isOwner, reply }) =>
 try{
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -545,13 +544,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+            text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -940,7 +938,7 @@ async (conn, m, mek, {
   from, q, prefix, isPre, isSudo, isOwner, isMe, reply
 }) => {
   try {
-    const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+    const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
     const isFree = pr.mvfree === "true";
 
     // Premium check
@@ -949,8 +947,8 @@ async (conn, m, mek, {
       return await conn.sendMessage(from, {
         text: "*`You are not a premium user⚠️`*\n\n" +
               "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-              "_Price : 200 LKR ✔️_\n\n" +
-              "*👨‍💻Contact us : 0778500326 , 0722617699*"
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
       }, { quoted: mek });
     }
 
@@ -1332,7 +1330,7 @@ try{
      if(!q) return await reply('*please give me text !..*')
 
 let sadas = await cinesubz_info(q)
-const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
      
 	
 let msg = `*☘️ 𝗧ɪᴛʟᴇ ➮* *_${sadas.data.title  || 'N/A'}_*
@@ -1368,7 +1366,7 @@ async (conn, m, mek, { from, q, prefix, isMe, isPre, isSudo, isOwner, reply }) =
     try {
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -1377,13 +1375,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -1700,7 +1697,7 @@ try{
 
 
 let sadas = await fetchJson(`https://darksadasyt-new-mv-site-info.vercel.app/?url=${q}`)
-const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
      
 	
 let msg = `*☘️ 𝗧ɪᴛʟᴇ ➮*  _${sadas.title  || 'N/A'}_
@@ -1759,7 +1756,7 @@ async (conn, m, mek, { from, q, prefix, isMe, isSudo, isPre, isOwner, reply }) =
 try{
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -1768,13 +1765,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -2137,7 +2133,7 @@ cmd({
 
         const episodes = sadas.data.episodes;
         const allLinks = episodes.map(ep => ep.link).filter(Boolean);
-        const showimg = sadas.data.mainImage || "https://i.ibb.co/hcyQfwy/7a265c4eee41e2b7.jpg";
+        const showimg = sadas.data.mainImage || "https://files.catbox.moe/w12h80.jpg";
         const showTitle = sadas.data.title || "Cinesubz_Show";
 
         const sampleEp = await cinesubz_tv_firstdl(allLinks[0]);
@@ -2263,7 +2259,7 @@ cmd({
     try {
         const sadas = await cinesubz_tvshow_info(url);
         const episodes = sadas.data.episodes;
-        const showimg = sadas.data.mainImage || "https://i.ibb.co/hcyQfwy/7a265c4eee41e2b7.jpg";
+        const showimg = sadas.data.mainImage || "https://files.catbox.moe/w12h80.jpg";
 
         if (!episodes || !episodes.length) return reply("❌ No episodes found for this link.");
 
@@ -2338,7 +2334,7 @@ try{
 
      if(!q) return await reply('*please give me text !..*')
 let sadas = await fetchJson(`https://darksadas-yt-cineszub-tv-shows.vercel.app/?url=${q}&apikey=pramashi`)
-	const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+	const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
      
 
 let msg = `*☘️ 𝗧ɪᴛʟᴇ ➮* *_${sadas.data.title || 'N/A'}_*
@@ -2387,7 +2383,7 @@ if(!q) return await reply(msr.giveme)
 
         const data = response.data;
        
-const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
  
         const movieInfo = `*☘️ 𝗧ɪᴛʟᴇ ➮* ${data.Title}
 
@@ -2439,7 +2435,7 @@ try{
 
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -2448,13 +2444,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -2837,7 +2832,7 @@ try{
      if(!q) return await reply('*please give me text !..*')
 
 let sadas = await pirate_dl(q)
-const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
      
 	
 let msg = `*☘️ 𝗧ɪᴛʟᴇ ➮* *_${sadas.result.title  || 'N/A'}_*
@@ -2875,18 +2870,18 @@ cmd({
 async (conn, m, mek, { from, q, prefix, isPre, isMe, isSudo, isOwner, reply }) => {
     try {
         // 🧩 Premium check
-        const pr = (await axios.get('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/master.json')).data;
+        const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
         const isFree = pr.mvfree === "true";
 
         if (!isFree && !isMe && !isPre) {
             await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
             return await conn.sendMessage(from, {
-                text: "*`You are not a premium user⚠️`*\n\n" +
-                      "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-                      "_Price : 200 LKR ✔️_\n\n" +
-                      "*👨‍💻Contact us : 0778500326 , 0722617699*"
-            }, { quoted: mek });
-        }
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
         if (config.MV_BLOCK == "true" && !isMe && !isSudo && !isOwner) {
             await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
@@ -3119,7 +3114,7 @@ console.log(`Input:`, q)
                 caption: `🎬 ${title}\n\n${config.NAME}\n\n${config.FOOTER}`,
                 mimetype: "video/mp4",
                 //jpegThumbnail: await (await fetch(botimg)).buffer(),
-                fileName: `🎬VISPER-MD🎬${title}.mp4`
+                fileName: `🎬 딜리샤 로드 🎬${title}.mp4`
             });
 		
      
@@ -3157,7 +3152,7 @@ try {
         return await reply('*🚫 No details found for this movie!*');
 
     // ✅ Fetch extra details (for footer / channel link)
-    const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+    const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
     // 🧾 Caption Template
     const msg = `*🍿 𝗧ɪᴛʟᴇ ➮* *_${sadas.title || 'N/A'}_*
@@ -3177,7 +3172,7 @@ try {
         {
             image: { url: sadas.images?.[0] || config.LOGO },
             caption: msg,
-            footer: config.FOOTER || "VISPER-MD 🎬",
+            footer: config.FOOTER || "딜리샤 로드 🎬",
         },
         { quoted: mek }
     );
@@ -3203,7 +3198,7 @@ cmd({
 async (conn, m, mek, { from, q, prefix, isPre, isMe, isSudo, isOwner, reply }) => {
 try {
 
-  const pr = (await axios.get('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/master.json')).data;
+  const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
   // Convert string to boolean
   const isFree = pr.mvfree === "true";
@@ -3212,12 +3207,12 @@ try {
   if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-      text: "*`You are not a premium user⚠️`*\n\n" +
-            "*Send a message to one of the numbers below and buy Lifetime Premium 🎉.*\n\n" +
-            "_Price : 200 LKR ✔️_\n\n" +
-            "*👨‍💻Contact us : 0778500326 , 0722617699*"
-    }, { quoted: mek });
-  }
+    text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
   if (config.MV_BLOCK == "true" && !isMe && !isSudo && !isOwner) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
@@ -3520,7 +3515,7 @@ try {
     const message = {
         document: { url: fhd },
         mimetype: "video/mp4",
-        fileName: `🎬VISPER-MD🎬${title}.mp4`,
+        fileName: `🎬 딜리샤 로드 🎬${title}.mp4`,
         caption: `🎬 *${title}*\n📺 *Quality:* ${quality}\n\n${config.FOOTER}`,
         jpegThumbnail: await (await fetch(image)).buffer(),
     };
@@ -3555,7 +3550,7 @@ async (conn, mek, m, {
         let sadas = await axios.get(`https://test-sadaslk-apis.vercel.app/api/v1/movie/sinhalasub/tv/info?q=${encodeURIComponent(q)}&apiKey=vispermdv4`);
 
         // master details (for channel link)
-        const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+        const details = (await axios.get('https://files.catbox.moe/w12h80.jpg')).data;
 
         const result = sadas.data.result;
         if (!result) return reply('❌ *No data found for the given link!*');
@@ -3640,7 +3635,7 @@ async (conn, m, mek, { from, q, prefix, isPre, isMe, isSudo, isOwner , reply }) 
 try{
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -3649,13 +3644,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -3989,7 +3983,7 @@ cmd({
     try {
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -3998,13 +3992,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -4391,7 +4384,7 @@ try{
 
         let movie = movieData.data.movie;
 
-	const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+	const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
      
 
 let msg = `*☘️ 𝗧ɪᴛʟᴇ ➮* *_${movie.title}_*
@@ -4426,7 +4419,7 @@ async (conn, m, mek, { from, q, prefix, isMe,isSudo, isPre, isOwner, reply }) =>
 try{
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -4434,15 +4427,12 @@ const isFree = pr.mvfree === "true";
 // if not free and not premium or owner
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
-    return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
-
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -4747,7 +4737,7 @@ try{
 
 let sadas = await getep(q)
 
-const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
 	
 let msg = `*☘️ 𝗧ɪᴛʟᴇ ➮* *_${sadas.result.title   || 'N/A'}_*
 
@@ -4779,7 +4769,7 @@ async (conn, m, mek, { from, q, prefix, isMe, reply }) => {
 try{
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -4788,13 +4778,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -5148,7 +5137,7 @@ try{
 
      if(!q) return await reply('*please give me text !..*')
 let sadas = await slanimeclub_ep(q)
-const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data
      
 	
 let msg = `*☘️ 𝗧ɪᴛʟᴇ ➮* *_${sadas.title  || 'N/A'}_*
@@ -5182,7 +5171,7 @@ async (conn, m, mek, { from, q, prefix, isMe, reply }) => {
 try{
 
 
-const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
 // convert string to boolean
 const isFree = pr.mvfree === "true";
@@ -5191,13 +5180,12 @@ const isFree = pr.mvfree === "true";
 if (!isFree && !isMe && !isPre) {
     await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
     return await conn.sendMessage(from, {
-    text: "*`You are not a premium user⚠️`*\n\n" +
-          "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-          "_Price : 200 LKR ✔️_\n\n" +
-          "*👨‍💻Contact us : 0778500326 , 0722617699*"
-}, { quoted: mek });
-
-}
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
 
 
@@ -5446,7 +5434,7 @@ async (conn, m, mek, { from, q, reply }) => {
         }
 
         // Extra follow link
-        const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+        const details = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
 
         const msg = `*☘️ 𝗧ɪᴛʟᴇ ➮* ${title}\n\n` +
                     `*📅 𝗥ᴇʟᴇꜱᴇᴅ ᴅᴀᴛᴇ ➮* ${released || 'N/A'}\n` +
@@ -5474,17 +5462,17 @@ cmd({
 }, async (conn, m, mek, { from, isPre, q, prefix, isMe, isSudo, isOwner, reply }) => {
     try {
         // Premium check
-        const pr = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
+        const pr = (await axios.get('https://raw.githubusercontent.com/Load-Dilisha/DB/refs/heads/main/main_var.json')).data;
         const isFree = pr.mvfree === "true";
         if (!isFree && !isMe && !isPre) {
             await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
             return await conn.sendMessage(from, {
-                text: "*`You are not a premium user⚠️`*\n\n" +
-                      "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
-                      "_Price : 200 LKR ✔️_\n\n" +
-                      "*👨‍💻Contact us : 0778500326 , 0722617699*"
-            }, { quoted: mek });
-        }
+        text: "*`You are not a premium user⚠️`*\n\n" +
+              "*Send a message to one of the 2 numbers below and buy Lifetime premium 🎉.*\n\n" +
+              "_Price : 2000 LKR ✔️_\n\n" +
+              "*👨‍💻Contact us : 0754871798, 0775700815*"
+      }, { quoted: mek });
+    }
 
         // Owner-only block
         if (config.MV_BLOCK == "true" && !isMe && !isSudo && !isOwner ) {
